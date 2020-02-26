@@ -14,20 +14,26 @@ import mediaQueryMin from '../../styles/MediaQueriesMixin';
 
 const SocialLinksContainer = styled.div`
   ${({ theme: { space } }) => `
+      margin: 0 0 ${space.xxl} calc(2 * ${space.m});
       display: flex;
-      align-items: center
-      margin: 0 0 ${space.xxl} ${space.xxl};
+      align-items: center;
+      align-self: flex-start;
+    `}
+    ${mediaQueryMin.s`
+      ${({ theme: { space } }) => `
+        margin: 0 0 ${space.xxl} calc(8 * ${space.m});
+      `}
     `}
     ${mediaQueryMin.m`
       ${({ theme: { space } }) => `
         position: relative;
-        left: calc(31.5 * ${space.m});
-        bottom: calc(16 * ${space.m});
+        left: calc(28 * ${space.m});
+        bottom: calc(9 * ${space.m});
       `}
     `}
     ${mediaQueryMin.l`
       ${({ theme: { space } }) => `
-        left: calc(27.5 * ${space.m});
+        left: calc(24 * ${space.m});
         bottom:  calc(13 * ${space.m});  
         margin-bottom: 0;
       `}
